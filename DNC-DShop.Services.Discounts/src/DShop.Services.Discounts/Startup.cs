@@ -62,6 +62,7 @@ namespace DShop.Services.Discounts
                 .SubscribeCommand<CreateDiscount>()
                  .SubscribeEvent<CustomerCreated>();
 
+            //To Do: Why below code not working for discount service
             //applicationLifetime.ApplicationStarted.Register(() => Container.Dispose());
             
         }
