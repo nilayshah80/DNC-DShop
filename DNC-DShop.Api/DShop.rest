@@ -1,6 +1,6 @@
 @apiUrl = http://localhost:5000
 @identityServiceUrl = http://localhost:5002
-@accessToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4N2M5N2MwNmRiM2M0ZGQ3YWQ3YjMxZDdmOGU0ZGIyYSIsInVuaXF1ZV9uYW1lIjoiODdjOTdjMDZkYjNjNGRkN2FkN2IzMWQ3ZjhlNGRiMmEiLCJqdGkiOiI2YTZkODFmNi04ZjE0LTRiM2EtYThjYS02YjAxMzU2MTRkZDIiLCJpYXQiOiIxNTY3NDQ2MTU2NDQxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsIm5iZiI6MTU2NzQ0NjE1NiwiZXhwIjoxNTY3NDQ3OTU2LCJpc3MiOiJkc2hvcC1pZGVudGl0eS1zZXJ2aWNlIn0.fxBnDX-3vjETNNN0LTjMRaGkOKQRRhiqGI0yoph01Lw
+@accessToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxZjgwZTExNTMzZDc0OWY1OWM0MTIxMTNjM2Q3YmJlMyIsInVuaXF1ZV9uYW1lIjoiMWY4MGUxMTUzM2Q3NDlmNTljNDEyMTEzYzNkN2JiZTMiLCJqdGkiOiIyNTBjOTUzNy05NTA0LTQ3M2ItODFhZS1kZDQwNTQxZmZhOGEiLCJpYXQiOiIxNTY3NTI4ODI4NjMwIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsIm5iZiI6MTU2NzUyODgyOCwiZXhwIjoxNTY3NTMwNjI4LCJpc3MiOiJkc2hvcC1pZGVudGl0eS1zZXJ2aWNlIn0.xSuKkanYNd1b908T4lHimKHZ_Tc_YdVtNNKPvXrJAAY
 @refreshToken = xxxxxxxxxxxxxxxxxx
 @operationId = xxxxxxxxxxxxxxxxxx
 @productId = 9196f1a5-f519-416a-bdb9-06135c0a46df
@@ -213,7 +213,21 @@ POST {{apiUrl}}/discounts
 Content-Type: application/json
 
 {
-    "customerId": "87c97c06-db3c-4dd7-ad7b-31d7f8e4db2a",
+    "customerId": "1f80e115-33d7-49f5-9c41-2113c3d7bbe3",
     "code": "PROMO",
     "percentage": 15
 }
+
+
+### Find Discount
+GET http://localhost:5010/discounts?customerid=1f80e115-33d7-49f5-9c41-2113c3d7bbe3
+
+### Get Discount
+GET http://localhost:5010/discounts/bb708154-3672-4109-8b00-d68b695d73df
+
+
+### Find Discount
+GET {{apiUrl}}/discounts?customerid=1f80e115-33d7-49f5-9c41-2113c3d7bbe3
+
+### Get Discount
+GET {{apiUrl}}/discounts/bb708154-3672-4109-8b00-d68b695d73df
